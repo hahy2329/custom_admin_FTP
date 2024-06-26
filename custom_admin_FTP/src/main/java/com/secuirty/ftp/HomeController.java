@@ -36,4 +36,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/intro/introduction.do", method = RequestMethod.GET)
+	public String introduction(Locale locale, Model model) {
+		
+		logger.info("Welcome Introduction!");
+		
+		return "intro/introduction";
+	}
 }
