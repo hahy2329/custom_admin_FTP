@@ -41,13 +41,33 @@
 						alert("사용할 수 있는 ID입니다.");
 						isValidId = true;
 					}else{
-						alert("사용할 수 없는 ID입니다.")ㅣ
+						alert("사용할 수 없는 ID입니다.");
 						isValidId = false;
 					}
 					
 				}		
 				
 			});
+		});
+		
+		$("form").submit(function(){
+			if(isValidId == false){
+				alert("아이디를 확인해주세요.");
+				return false;
+			}
+			if($("#password").val() == ''){
+				alert("패스워드를 입력해주세요.");
+				return false;
+			}
+			if(isValid == true){
+				if($("#password").val() == $("#confirmPasswd").val()){
+					
+				}else{
+					alert("패스워드를 다시 확인해주세요.");
+					return false;
+				}
+			}
+			
 		});
 	});
 
