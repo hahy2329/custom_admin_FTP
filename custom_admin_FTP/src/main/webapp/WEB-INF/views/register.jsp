@@ -54,11 +54,17 @@
 </script>
 </head>
 <body>
+	<form:form method="POST" action="${contextPath }/register">
 	<p>아이디</p>
 		<input type="text" id="userId" name="userId" required="required" placeholder="아이디를 입력해주세요.">
 		<input type="button" id="btnOverlapped" value="중복확인">
 	<p>이름</p>
 		<input type="text" id="userName" name="userName" required="required" placeholder="이름을 입력해주세요.">
-	
+	<p>비밀번호</p>
+		<input type="password" id="password" name="password" required="required" placeholder="비밀번호를 입력해주세요.">
+	<p>비밀번호 확인</p>
+		<input type="password" id="confirmPasswd" placeholder="비밀번호 재입력" required="required">
+		<button type="submit">회원가입</button>	
+	</form:form>
 </body>
 </html>

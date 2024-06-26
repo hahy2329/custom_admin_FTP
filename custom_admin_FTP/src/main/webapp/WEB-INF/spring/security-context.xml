@@ -17,7 +17,7 @@
 		<form-login login-page="/login/loginForm.do"
 					default-target-url="/"
 					authentication-failure-url="/login/loginForm.do?error"
-					username-parameter="id"
+					username-parameter="userId"
 					password-parameter="password"/>
 		<logout logout-url="/logout"
 				logout-success-url="/"/>
