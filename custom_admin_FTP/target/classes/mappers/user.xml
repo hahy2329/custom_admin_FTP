@@ -10,5 +10,15 @@
 		WHERE
 			USER_ID = #{userId}
 	</select>
-
+	
+	<insert id="userRegister" parameterType="UserDTO">
+	 	INSERT INTO USER(USER_ID, PASSWORD, USER_NAME, ENABLED)
+	 	VALUES(
+	 		#{userId},
+	 		#{password},
+	 		#{userName},
+	 		#{enabled}
+	 	)
+	</insert>
+	
 </mapper>

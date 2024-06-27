@@ -1,5 +1,8 @@
 package com.secuirty.ftp.user.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -32,7 +35,19 @@ public class UserController {
 	}
 	
 	@PostMapping("/register")
-	public ResponseEntity<Object> userRegister(@ModelAttribute UserDTO userDTO) throws Exception{
+	public ResponseEntity<Object> userRegister(@ModelAttribute UserDTO userDTO, HttpServletRequest request) throws Exception{
+		
+		userService.userRegister(userDTO);
+		
+		String message = "<script>";
+		message += "alert('회원가입 완료!');";
+		message += "location.href='" + request.getContextPath() + "/';";
+		message += "</script>";
+		
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		
+		return new ResponseEntity<Object>(message, responseHeaders, HttpStatus.OK);
 		
 	}
 	
