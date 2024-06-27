@@ -11,7 +11,12 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public String checkDuplicatedId(String userId) throws Exception {
-		return userDAO.checkDuplicatedId(userId);
+		if(userDAO.checkDuplicatedId(userId) == null) {
+			return "NotDuplicate";
+		}else {
+			return "Duplicate";
+		}
+		
 	}
 	
 }
