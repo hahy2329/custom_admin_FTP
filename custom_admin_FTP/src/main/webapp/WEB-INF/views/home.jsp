@@ -23,7 +23,7 @@
 
 <h3>
 	[<a href="<c:url value="/intro/introduction.do"/>">소개 글</a>]
-	[<a href="<c:url value="/register"/>">유저 회원가입</a>]
+	[<a href="<c:url value="/user/register"/>">유저 회원가입</a>]
 	[<a href="<c:url value="/admin/adminPage"/>">관리자 페이지</a>]
 	[<a href="<c:url value="/ftpService"/>">파일 다운로드</a>]
 </h3>
