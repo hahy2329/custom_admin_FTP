@@ -1,4 +1,4 @@
-package com.security.user;
+package com.secuirty.ftp.user.dto;
 
 import lombok.Data;
 
