@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 	
 	var isValidId = false;
