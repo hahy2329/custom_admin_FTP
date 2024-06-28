@@ -18,7 +18,7 @@
     var pattern3 = /[~!@\#$%<>^&*]/;
     
 	$().ready(function(){
-		$("#btnOverlapped").click(function(){
+		$(document).on("click", "#btnOverlapped", function(){
 			
 			$(".answer").empty();
 			
