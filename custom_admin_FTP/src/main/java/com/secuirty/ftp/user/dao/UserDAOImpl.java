@@ -21,4 +21,16 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
+	@Override
+	public void userAuthorities(UserDTO userDTO) throws Exception {
+		sqlSession.insert("user.userAuthorities", userDTO);
+		
+	}
+
+	@Override
+	public void userGroupMember(UserDTO userDTO) throws Exception {
+		sqlSession.insert("user.userGroupMember", userDTO);
+		
+	}
+
 }

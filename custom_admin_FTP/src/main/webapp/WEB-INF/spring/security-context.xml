@@ -9,8 +9,8 @@
 	<http use-expressions="true">
 		<intercept-url pattern="/login/loginForm.do" access="permitAll"/>
 		<intercept-url pattern="/" access="permitAll"/>
-		<intercept-url pattern="/register" access="permitAll"/>
-		<intercept-url pattern="/checkDuplicatedId" access="permitAll"/>
+		<intercept-url pattern="/user/register" access="permitAll"/>
+		<intercept-url pattern="/user/checkDuplicatedId" access="permitAll"/>
 		<intercept-url pattern="/admin/**" access="hasRole('ADMIN')"/>
 		<intercept-url pattern="/**" access="hasAnyRole('USER, ADMIN')"/>
 		

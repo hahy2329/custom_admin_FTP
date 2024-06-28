@@ -6,4 +6,6 @@ public interface UserDAO {
 	
 	public String checkDuplicatedId(String userId) throws Exception;
 	public void userRegister(UserDTO userDTO) throws Exception;
+	public void userAuthorities(UserDTO userDTO) throws Exception;
+	public void userGroupMember(UserDTO userDTO) throws Exception;
 }

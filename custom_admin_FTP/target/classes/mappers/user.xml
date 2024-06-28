@@ -21,4 +21,20 @@
 	 	)
 	</insert>
 	
+	<insert id="userAuthorities" parameterType="UserDTO">
+		INSERT INTO AUTHORITIES(USER_ID, AUTHORITY)
+		VALUES(
+			#{userId},
+			'ROLE_USER'
+		)
+		
+	</insert>
+	
+	<insert id="userGroupMember" parameterType="UserDTO">
+		INSERT INTO GROUP_MEMBER(GROUP_ID, USER_ID)
+		VALUES(
+			'G01',
+			#{userId}
+		)
+	</insert>
 </mapper>
