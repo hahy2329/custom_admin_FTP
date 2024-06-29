@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import com.secuirty.ftp.user.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 	
+	@Autowired
 	private UserService userService;
 	
 	private Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -34,13 +36,12 @@ public class UserController {
 	
 	
 	@GetMapping("/checkDuplicatedId")
-	public ResponseEntity<String> checkDuplicatedId(String userId) throws Exception{
+	public ResponseEntity<String> checkDuplicatedId(@RequestParam("userId") String userId) throws Exception{
 		
 		logger.info("userInfo CheckId!");
 		System.out.println(userId);
-		String userIds = userId;
 		
-		return new ResponseEntity<String>(userService.checkDuplicatedId(userIds), HttpStatus.OK);
+		return new ResponseEntity<String>(userService.checkDuplicatedId(userId), HttpStatus.OK);
 		
 	}
 	

@@ -1,5 +1,6 @@
 package com.secuirty.ftp.user.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,10 @@ import com.secuirty.ftp.user.dto.UserDTO;
 @Service
 public class UserServiceImpl implements UserService{
 	
+	@Autowired
 	private UserDAO userDAO;
+	
+	@Autowired
 	private BCryptPasswordEncoder bcryptPasswordEncoder;
 	
 	@Override
